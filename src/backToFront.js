@@ -4,6 +4,12 @@
  * @param {number} symbolsCount
  * @returns {string}
  */
-module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+module.exports.backToFront = function backToFront(str, symbolsCount) 
+{
+  if (symbolsCount > str.length) 
+  {
+    return str;
+  }
+  const slicedSymbols = str.slice(str.length - symbolsCount);
+  return `${slicedSymbols}${str}${slicedSymbols}`;
 };

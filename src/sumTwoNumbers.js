@@ -5,5 +5,10 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  const parseNumber = (input) =>
+    typeof input === 'string' ? Number(input.replaceAll(" ", "")) : input;
+
+  firstNumber = parseNumber(firstNumber);
+  secondNumber = parseNumber(secondNumber);
+  return firstNumber + secondNumber;
 };
